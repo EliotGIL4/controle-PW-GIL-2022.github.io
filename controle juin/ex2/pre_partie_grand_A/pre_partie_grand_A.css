@@ -47,14 +47,22 @@ a:visited {
   color: purple;
 } 
 
-#partie_actuelle {
+h1 {
   color: white;
   text-decoration: underline;
   text-align: center;
   font-family: 'GlacialIndifference-Bold';
   font-size: 50px;
-  padding-left: 35%;
+  padding-left: 5%;
   padding-top: 25px;
+}
+
+h2 {
+  color: black;
+  text-decoration: underline;
+  text-align: center;
+  font-family: 'GlacialIndifference-Bold';
+  font-size: 35px;
 }
 
 #flex {
