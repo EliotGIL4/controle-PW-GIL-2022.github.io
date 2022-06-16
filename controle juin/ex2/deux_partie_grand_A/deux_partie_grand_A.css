@@ -1,0 +1,127 @@
+#flexboxhaut {
+  display: flex;
+  flex-direction: row ;
+  position: relative;
+  align-items: flex-start;
+}
+
+#gauche { 
+  width: 15%;
+  display: flex;
+  flex-flow: column wrap;
+  border: 2px black ;
+  border-style: solid none solid solid;
+  background-color:rgb(184, 184, 184);
+  padding: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+} 
+
+#h1_gauche {
+  border: 3px inset;
+  background-color:rgb(207, 207, 207);
+  text-align: center;
+}
+
+#milieu {
+  width: 70%;
+  display: flex;
+  flex-flow: column wrap;
+  border: 2px black dotted;
+  background-color: rgb(145, 145, 145);
+  padding: 10px;
+}
+
+#first_milieu {
+  border : 2px black none;
+  border-top-style: solid;
+  background-color:rgb(184, 184, 184);
+  margin-bottom: 10px;
+}
+
+#h1_milieu_haut {
+  background-color:rgb(207, 207, 207);
+  border : 1 px rgb(100, 100, 100) ;
+  border-style: none none solid none;
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+#para_milieu_haut {
+  text-align: justify;
+  padding : 10px;
+}
+
+#scd_milieu {
+  background-color:rgb(184, 184, 184);
+  border : 2px black none;
+  border-bottom-style: solid;
+}
+
+#h1_milieu_bas {
+ text-align: right;
+ font-style: italic;
+ padding-right: 5px;
+}
+
+#para_milieu_bas {
+  border: 2px black ;
+  border-style: none solid none solid;
+  text-align: justify;
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+
+#droite {
+  width: 15%;
+  display: flex;
+  flex-flow: column wrap;
+  background-color:rgb(184, 184, 184);
+  border: 2px black ;
+  border-style: solid solid solid none;
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#h1_droite {
+  border: 3px outset;
+  background-color:rgb(207, 207, 207);
+  text-align: center;
+}
+
+#para_droite {
+  text-align: right;
+}
+
+#bas {
+  background-color:rgb(184, 184, 184);
+  border: 2px black ;
+  border-style: none solid none solid;
+  padding: 10px;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-top : 70px;
+  margin-bottom: 5px;
+}
+
+#h1_bas {
+  background-color:rgb(207, 207, 207);
+  font-style: italic;
+  text-align: center;
+}
+
+#para_bas {
+  text-align: center;
+  width: 50%;
+  padding-left: 25%;
+  padding-right: 25%;
+}
