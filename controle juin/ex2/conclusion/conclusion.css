@@ -79,6 +79,13 @@ aside {
   padding: 15px;
 }
 
+.CV {
+  padding : 5px;
+  padding-left: 5px;
+  border: 2px rgb(12, 81, 145) dotted;
+  text-align: center;
+}
+
 article {
   margin-left: 10px;
   padding: 10px;
