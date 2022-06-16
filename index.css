@@ -1,0 +1,418 @@
+/* DEBUT DU CSS */
+
+/* -------------------- GENERAL -------------------- */
+
+  /* Je souhaite mettre de façon générale une police, une taille, un alignage et une transition sur tout le CV */
+
+    * {
+     font-family: 'GlacialIndifference-Regular' ;
+     font-size: 22px;
+     text-align: justify;
+     scroll-behavior: smooth;
+    }
+
+  /* Insertion d'une police spéciale en normal et gras en deux formats pour avoir une meilleure compatibilité */
+
+   @font-face {
+     font-family : 'GlacialIndifference-Regular';
+     src: url('police/GlacialIndifference-Regular.otf') format('otf');
+     src: url('police/GlacialIndifference-Regular.ttf') format('truetype');
+   }
+
+    @font-face {
+      font-family : 'GlacialIndifference-Bold';
+     src: url('police/GlacialIndifference-Bold.otf') format('otf');
+     src: url('police/GlacialIndifference-Bold.ttf') format('truetype');
+   }
+
+  /* Je préfère rétrécir le body de ma page afin de voir son ensemble 
+  (si on le fait pas le menu de navigation par exemple n'apparaît plus)  */
+
+   body {
+     padding: 2em; 
+   }
+
+/* ------------------ FIN GENERAL ------------------- */
+
+
+/* --------------------- HEADER ---------------------- */
+
+  /* En-tête du site internet avec l'image */
+
+    header {
+     background-image: url("images/Fond_2.jpeg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 150px;
+    }
+
+  /* Menu fixe étant un flex afin d'avoir une bordure et un fond délimité aux seuls éléments du flex 
+  et non pas sur toute la ligne */
+
+   #ul_ancre {
+     position: fixed;
+     list-style-type : none;
+     display: flex;
+     border: 2px #47167D solid;
+     background-color: white;
+    }
+
+   .li_ancre {
+     margin-left: 177px;
+     margin-bottom: 10px;
+     margin-top: 10px;
+     margin-right: 110px;
+     border: 1px #47167D solid;
+     background-color: white;
+     padding: 10px;
+    }
+
+    /* Ici on colle notre menu de navigation à la fenêtre d'en haut */
+
+    #bloc_ancre {
+      margin-top: -67px;
+    }
+
+   /* Ici je veux que en survolant les éléments du flex avec la souris, le fond devienne rose pale */
+
+    #ul_ancre :hover {
+      background-color :#ffe9eb;
+      transition: background 0.5s ease-in;
+    }
+
+/* ------------------- FIN HEADER -------------------- */
+
+/* ---------------------- LIENS ------------------- */
+
+  /* D'abord, je veux qu'ils aient une couleur bleu foncé 
+  et pas de soulignage */
+
+  a {
+    color: darkblue ;
+    text-decoration: none;
+  }
+
+  /* Ensuite, je veux que quand on passe la souris dessus, 
+  ils deviennent bleu clair et soulignés */
+
+  a:hover {
+    text-decoration: underline;
+    color: blue;
+  }
+
+  /* Enfin, je veux qu'après avoir cliqué sur un lien, 
+  celui-ci reste violet pour montrer qu'on a déjà visité le site */
+
+  a:visited {
+    text-decoration: underline;
+    color: purple;
+  } 
+
+  /* Ici je dois modifier la couleur du lien LinkedIn car avec les commandes css faites au début, 
+  il apparaît bleu, or je veux qu'il soit blanc */
+
+  #LinkedIn {
+    color: black;
+  }
+
+  #LinkedIn:hover{
+    color:blue;
+  }
+
+/* --------------------- FIN LIENS ------------------ */
+
+
+/* -------------------- MILIEU DU CV ----------------- */
+
+  /* Premier flex permettant d'aligner à l'horizontale les éléments aside et article */
+
+    #flex {
+     display: flex;  
+    }
+
+  /* Ici je m'occupe de l'espacement entre les différents éléments qui seront présents sur le CV */
+
+    .bloc {
+      padding : 10px;
+    }
+
+    h1 {
+     margin : 15px;
+    }
+
+    li {
+     padding-top : 10px;
+    }
+
+    ul {
+      margin : 15px;
+    }
+
+  /*------------------ COTE GAUCHE ------------------- */
+
+    /* Ici je décide de mettre un fond sur la partie à droite du CV et de changer la couleur de la police en blanc */
+
+     aside {
+       background-image: url("images/Fondcote.jpg");
+       background-repeat: no-repeat;
+       background-size: cover;
+       color: black ;
+       text-shadow: 2px 2px 0px whitesmoke
+      }
+
+    /* Cette partie concerne ma photo de profil qui va être ronde */
+
+      #photo_id { 
+       border-radius: 50%;
+       max-width: 200px;
+       margin: 50px;
+       padding: 10px;
+       display: block;
+      }
+
+    /* Ici je fais en sorte de mettre en gras et en plus grand "CV d'Eliot GIL" tout en mettant une ombre au titre afin qu'il ressorte mieux */
+
+      #titre { 
+       font-family: 'GlacialIndifference-Bold' ;
+       font-size: 50px;
+       text-shadow: 2px 2px 2px whitesmoke;
+      }
+
+    /* Là je fais en sorte que le titre "Coordonnées" apparaisse en blanc, gras 
+    mais aussi en ajoutant une bordure noire en haut et bas du titre, pour visuellement bien remarquer cette partie */
+
+      .categorie_cote{ 
+       font-family: 'GlacialIndifference-Bold' ;
+       border-bottom: 2px black solid;
+       border-top: 2px black solid;
+       font-size: 35px;
+       padding: 15px;
+       text-transform: uppercase;
+       text-align: center;
+      }
+
+    /* Réduction de la taille pour les logos dans la partie Coordonnées */
+
+     .logo{
+        width: 25px;
+        height: 25px;
+        padding-right: 20px;
+      }
+
+    /* Redimension du QR code permettant de télécharger le CV sous forme pdf  */
+
+      #QR_code{
+        width: 200px;
+        height: 250px;
+        padding-left: 40px;
+      }
+  
+  /*---------------- FIN COTE GAUCHE ----------------- */
+
+
+  /*------------------ COTE DROIT -------------------- */
+
+    /* Ici je fais en sorte de mettre en violet tout ce qui se trouve dans la partie droite du CV */
+
+     article { 
+       color: #47167D;
+      }
+
+    /* Ici je fais en sorte de mettre une bordure violette pour les expériences et diplômes, tout en espassant le tout.
+    Je dois différencier le cas des expériences et diplômes ayant des li et ceux n'en n'ayant pas
+    car les li ont un padding/margin propre et les deux vont s'additionner. Je dois donc adapter en fonction. */
+
+      .cadre_puce_tout {
+        border: #47167D 1px solid;
+        margin-bottom: 50px;
+        margin-right: 25px;
+        padding-top: 40px;
+        padding-bottom:30px;
+      }
+
+      .cadre_puce_tout_sans_li2nd {
+        border: #47167D 1px solid;
+        margin-bottom: 50px;
+        margin-right: 25px;
+        padding-top: 40px;
+        padding-bottom:40px;
+      }
+
+      .cadre_puce_tout_diplomes {
+        border: #47167D 1px solid;
+        margin-bottom: 50px;
+        margin-right: 25px;
+        padding-top: 40px;
+        padding-bottom:30px;
+      }
+
+      .cadre_puce_tout_diplomes_sans_li {
+        border: #47167D 1px solid;
+        margin-bottom: 50px;
+        margin-right: 25px;
+        padding-top: 40px;
+        padding-bottom:40px;
+      }
+
+    /* Comme pour "Coordonnées" (sauf concernant la couleur blanche), je fais en sorte de mettre en gras les 3 titres et mettre des bordures en haut et bas */
+
+     #Experiences, #Diplomes, #Competences { 
+       font-family: 'GlacialIndifference-Bold' ;
+       font-size: 40px;
+       text-transform: uppercase;
+       text-align: center;
+       border-bottom: 2px #47167D solid;
+       border-top: 2px #47167D solid;
+       padding: 10px;
+      }
+
+    /* Ici, je fais en sorte d'intégrer les puces dans les espaces des textes afin de les rapprocher 
+    et j'espace le tout */
+
+      .li_2nd {
+        list-style-position: inside;
+        padding-right: 20px;
+        padding-left: 10px;
+      }
+
+      .li_2nd_diplomes {
+        list-style-position: inside;
+        padding-right: 20px;
+      }
+
+    /* Ici, j'enlève le style (les points noirs) aux puces de premier niveau  */
+
+      .puce_1er {
+        list-style-type: none;
+      }
+
+    /* Ici, je redimensionne les images insérées en deux groupes/classes (image_exp_1 et _2) 
+    et celle ayant l'id "jurislogic" (nécessite un paramétrage différent) */
+
+        /* Dans Experiences */
+
+          .image_exp_1{ 
+           width: 100px;
+           height: 60px;
+           float: left;
+           padding-left : 20px;
+           padding-right: 20px;
+           margin-top: -5px;
+          }
+
+         #jurislogic{
+            width: 80px;
+            height: 80px;
+            float: left;
+            padding-left : 20px;
+            padding-right: 20px;
+          }
+
+          .image_exp_2{
+            width: 80px;
+            height: 80px;
+            float: left;
+            padding-left : 20px;
+            padding-right: 20px;
+            margin-top: -15px;
+          }
+
+        /* Dans Diplômes en deux groupes/classes */
+
+        .image_diplome_1 {
+          width: 80px;
+          height: 80px;
+          float: left;
+          padding-left : 20px;
+          padding-right: 17px;
+          margin-top: -15px;
+        }
+
+        .image_diplome_2{
+          width: 80px;
+          height: 80px;
+          float: left;
+          padding-left : 20px;
+          padding-right: 20px;
+          margin-top: -15px;
+        }
+
+    /* Dernière partie de la partie droite du CV : les Compétences.
+    Pour les compétences je choisis de faire un flex afin de positionner les éléments.
+    Je fais en sorte que les éléments sont tous espacés de manière horizontale et je rajoute 
+    des petits logos correspondants à la compétence citée, tout en encadrant les compétences. */
+
+      #flex_competence {
+        display: flex;
+        list-style-type: none;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+      }  
+
+      .milieu {
+        font-size: 20px;
+        background-color: white;
+        border: #47167D 1px solid;
+        border-radius: 50px;
+        margin : 10px;
+        padding : 15px;
+      }
+
+      .logo_competences {
+        width: 30px;
+        height: 30px;
+        float: left;
+        padding-right: 10px;
+      }
+
+      #flex_competence :hover {
+        background-color :#ffe9eb;
+        transition: background 0.5s ease-in;
+       }
+
+/*------------------ FIN COTE DROIT ------------------ */
+ 
+/* ------------------ FIN MILIEU DU CV --------------- */
+
+/* --------------------- FOOTER ---------------------- */
+
+  /* Tout d'abord, la photo d'en bas */
+
+    footer {
+      background-image: url("images/Fond_2.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100px;
+   }
+ 
+   /* Ensuite je veux avoir écrit sur cette photo une phrase ayant une ancre pour remonter en haut de la page.
+   Or, si je le fais, avec la photo en background, on n'arrive pas à lire cette phrase. 
+   Si j'essaye de mettre un fond de couleur, celui-ci occupe toute la ligne puisque je veux que la phrase soit centrée.
+   C'est pour cela que j'ai créé un div sur lequel je crée un flex permettant de centrer l'élément (comme pour les ancres du haut). */
+ 
+   #flex_bas{
+     display: flex;
+   }
+
+   /* Ici je veux que en survolant ma souris sur les éléments du flex, le fond devienne rose pale. */
+
+   #flex_bas :hover {
+    background-color :#ffe9eb;
+    transition: background 0.5s ease-in;
+   }
+ 
+   /* Ce qui me permet ensuite de mettre un fond et une bordure uniquement sur cet élément et non pas sur toute la ligne. */
+ 
+   .bas { 
+     font-family: 'GlacialIndifference-Bold' ;
+     font-size: 25px;
+     text-shadow: 2px 2px 2px white;
+     background-color: white;
+     border: #47167D solid;
+     margin-left: 400px;
+     padding : 10px;
+   }
+ 
+/* -------------------- FIN FOOTER ------------------- */
+
+/* FIN DU CSS :) */
