@@ -1,0 +1,92 @@
+* {
+    font-family: 'GlacialIndifference-Regular' ;
+    font-size: 22px;
+    text-align: justify;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family : 'GlacialIndifference-Regular';
+    src: url('../police/GlacialIndifference-Regular.otf') format('otf');
+    src: url('../police/GlacialIndifference-Regular.ttf') format('truetype');
+}
+
+@font-face {
+     font-family : 'GlacialIndifference-Bold';
+    src: url('../police/GlacialIndifference-Bold.otf') format('otf');
+    src: url('../police/GlacialIndifference-Bold.ttf') format('truetype');
+}
+
+body {
+    padding: 2em; 
+}
+
+header {
+    background-image: url("../image/header.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+}
+
+a {
+    color: darkblue ;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+a:visited {
+    text-decoration: underline;
+    color: purple;
+} 
+
+#partie_actuelle {
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    font-family: 'GlacialIndifference-Bold';
+    font-size: 50px;
+    padding-left: 35%;
+    padding-top: 25px;
+}
+
+#flex {
+    display: flex;  
+}
+
+aside {
+    background-color: rgb(204, 242, 255);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black ;
+    text-shadow: 2px 2px 0px whitesmoke;
+    margin-right: 10px;
+    padding: 15px;
+}
+
+article {
+    margin-left: 10px;
+    padding: 10px;
+}
+
+#flex_bas{
+    display: flex;
+}
+
+#flex_bas :hover {
+    background-color :#ffe9eb;
+    transition: background 0.5s ease-in;
+}
+
+.bas { 
+    font-family: 'GlacialIndifference-Bold' ;
+    font-size: 25px;
+    text-shadow: 2px 2px 2px white;
+    background-color: white;
+    border: #47167D solid;
+    margin-left: 40%;
+    padding : 10px;
+}
