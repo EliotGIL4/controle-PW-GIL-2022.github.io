@@ -17,6 +17,10 @@
     src: url('../police/GlacialIndifference-Bold.ttf') format('truetype');
 }
 
+p {
+    text-indent: 30px;
+  }
+  
 body {
     padding: 2em; 
 }
